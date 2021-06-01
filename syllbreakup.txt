@@ -1,0 +1,73 @@
+
+1st)
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[1]/div/table/tbody/tr[1]
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[1]/div/table/tbody/tr[3]
+
+block planning
+2nd)
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[2]/table/tbody/tr[1]
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[2]/table/tbody/tr[2]
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[2]/table/tbody/tr[3]
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[2]/table/tbody/tr[4]
+
+3rd)
+/html/body/div[2]/div/div/section/div/div/div[2]/div/div/div[1]/div/button
+/html/body/div[2]/div/div/section/div/div/div[2]/div/div/div[2]/div/button
+/html/body/div[2]/div/div/section/div/div/div[2]/div/div/div[3]/div/button....8
+
+Day planning
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[1]/div/table/tbody/tr[2]
+
+2nd)
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[2]/table/tbody/tr[1]
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[2]/table/tbody/tr[2]
+
+3rd)
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[3]/table/tbody/tr[1]
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[3]/table/tbody/tr[2]....8
+
+4th)
+/html/body/div[2]/div/div/section/div/div/div[2]/div/div/div[1]/a/div/button
+/html/body/div[2]/div/div/section/div/div/div[2]/div/div/div[2]/a/div/button
+
+
+
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[2]/table/tbody/tr[1]/td
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[2]/table/tbody/tr[2]/td
+
+Block Completion Report
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[1]/div/table/tbody/tr[3]/td
+teacher
+/html/body/div[2]/div/div/section/div/div/div[1]/div/div/div[2]/table/tbody/tr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for(int r=1;r<=16;r++)
+						{
+							driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+							driver.findElement(By.xpath("/html/body/div[2]/div/div/section/div/div/div[2]/div/div/div["+r+"]/a/div/button")).click();
+							driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+							driver.navigate().back();
+						}
+						for(int r2=17;r2<=blocks;r2++)
+						{
+							js.executeScript("scroll(0,500)");
+							driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+							driver.findElement(By.xpath("/html/body/div[2]/div/div/section/div/div/div[2]/div/div/div["+r2+"]/a/div/button")).click();
+							driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+							driver.navigate().back();
+						}
+						
+
